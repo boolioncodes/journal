@@ -2,7 +2,8 @@
 layout: default
 title: "Journal Index"
 ---
-# Journal
+
+## Index of posts
 
 <ul>
   {% for post in site.posts %}
