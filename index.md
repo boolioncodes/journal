@@ -1,4 +1,13 @@
+---
+layout: default
+title: "Journal Index"
+---
+# Journal
 
-# Hello world!
-
-I'm here
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
