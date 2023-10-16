@@ -1,1 +1,4 @@
 baseurl: /journal
+
+minima:
+  skin: solarized-dark
