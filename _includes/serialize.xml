@@ -15,5 +15,5 @@
     </node>
   {% endif %}
 {% else %}
-  {% include.var %}
+  {{ include.var }}
 {% endif %}
