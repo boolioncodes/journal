@@ -1,1 +1,3 @@
+<pre>
 {{ site | inspect }}
+</pre>
