@@ -31,14 +31,16 @@ fu:
 
 ## foo
 
-`page.foo | size` : {{ page.foo | size }}  
 <pre><code class="language-json">
 {{ page.foo | inspect }}
 </code></pre>
+`page.foo | size` : {{ page.foo | size }}   
+`page.foo.first` : {{ page.foo.first }}
 
 ## fu
-`page.fu | size` : {{ page.fu | size }}
 <pre><code class="language-json">
 {{ page.fu | inspect }}
 </code></pre>
+`page.fu | size` : {{ page.fu | size }}
+`page.fu.first` : {{ page.fu.first }}
 
