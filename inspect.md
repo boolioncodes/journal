@@ -26,5 +26,5 @@ fu:
 ## `page`
 
 <pre><code class="language-json">
-{{ page | inspect }}
+{{ page | jsonify }}
 </code></pre>
