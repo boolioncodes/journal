@@ -35,12 +35,14 @@ fu:
 {{ page.foo | inspect }}
 </code></pre>
 `page.foo | size` : {{ page.foo | size }}   
-`page.foo.first` : {{ page.foo.first }}
+`page.foo.first` : {{ page.foo.first }}  
+`page.foo.first | size` : {{ page.foo.first | size }}   
 
 ## fu
 <pre><code class="language-json">
 {{ page.fu | inspect }}
 </code></pre>
-`page.fu | size` : {{ page.fu | size }}
-`page.fu.first` : {{ page.fu.first }}
+`page.fu | size` : {{ page.fu | size }}  
+`page.fu.first` : {{ page.fu.first }}  
+`page.fu.first | size` : {{ page.fu.first | size }}   
 
