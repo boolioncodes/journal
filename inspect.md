@@ -45,6 +45,10 @@ eeny:
 `page.foo.first` : {{ page.foo.first }}  
 `page.foo.first | size` : {{ page.foo.first | size }}   
 `page.foo.first.first` : {{ page.foo.first.first }}  
+`page.foo.first.bar | size` : {{ page.foo.first.bar | size }}   
+`page.foo.first.bar.first` : {{ page.foo.first.bar.first }}  
+`page.foo.first.bar.first | size` : {{ page.foo.first.bar.first | size }}   
+`page.foo.first.bar.first.first` : {{ page.foo.first.bar.first.first }}  
 
 ## fu
 <pre><code class="language-json">
@@ -54,6 +58,10 @@ eeny:
 `page.fu.first` : {{ page.fu.first }}  
 `page.fu.first | size` : {{ page.fu.first | size }}   
 `page.fu.first.first` : {{ page.fu.first.first }}  
+`page.fu.bar | size` : {{ page.fu.bar | size }}  
+`page.fu.bar.first` : {{ page.fu.bar.first }}  
+`page.fu.bar.first | size` : {{ page.fu.bar.first | size }}   
+`page.fu.bar.first.first` : {{ page.fu.bar.first.first }}  
 
 ## fee
 <pre><code class="language-json">
