@@ -49,6 +49,9 @@ eeny:
 `page.foo.first.bar.first` : {{ page.foo.first.bar.first }}  
 `page.foo.first.bar.first | size` : {{ page.foo.first.bar.first | size }}   
 `page.foo.first.bar.first.first` : {{ page.foo.first.bar.first.first }}  
+```xml
+{{ include serialize.xml var=page.foo }}
+```
 
 ## fu
 <pre><code class="language-json">
@@ -62,6 +65,9 @@ eeny:
 `page.fu.bar.first` : {{ page.fu.bar.first }}  
 `page.fu.bar.first | size` : {{ page.fu.bar.first | size }}   
 `page.fu.bar.first.first` : {{ page.fu.bar.first.first }}  
+```xml
+{{ include serialize.xml var=page.fu }}
+```
 
 ## fee
 <pre><code class="language-json">
@@ -71,6 +77,10 @@ eeny:
 `page.fee.first` : {{ page.fee.first }}  
 `page.fee.first | size` : {{ page.fee.first | size }}   
 `page.fee.first.first` : {{ page.fee.first.first }}  
+```xml
+{{ include serialize.xml var=page.fee }}
+```
+
 
 ## eeny
 <pre><code class="language-json">
@@ -88,4 +98,6 @@ eeny:
 `page.eeny.meeny.miney.first` : {{ page.eeny.meeny.miney.first }}  
 `page.eeny.meeny.miney.first | size` : {{ page.eeny.meeny.miney.first | size }}   
 `page.eeny.meeny.miney.first.first` : {{ page.eeny.meeny.miney.first.first }}  
-
+```xml
+{{ include serialize.xml var=page.eeny }}
+```
