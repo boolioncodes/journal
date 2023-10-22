@@ -1,9 +1,11 @@
 {% if include.var.first %} 
     <node 
   {% assign len = include.var | size %}
-  {% if !include.var.first.first and len == 2 %} 
-      key="{{ include.var[0] }}">
-      {% include serialize.xml var=include.var[1] %}
+  {% if !include.var.first.first and len == 2 %}
+      {% assign key = include.var[0] %}
+      {% assign val = include.var[1] %}
+      key="{{ key }}">
+      {% include serialize.xml var=val %}
     </node>
   {% else %}
     >
