@@ -5,6 +5,9 @@ foo:
 fu:
   bar: fubar
   baz: fubaz
+fee:
+ - fie
+ - fo
 ---
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
@@ -48,4 +51,12 @@ fu:
 `page.fu.first | size` : {{ page.fu.first | size }}   
 `page.fu.first.first` : {{ page.fu.first.first }}  
 
+## fee
+<pre><code class="language-json">
+{{ page.fee | inspect }}
+</code></pre>
+`page.fee | size` : {{ page.fee | size }}  
+`page.fee.first` : {{ page.fee.first }}  
+`page.fee.first | size` : {{ page.fee.first | size }}   
+`page.fee.first.first` : {{ page.fee.first.first }}  
 
