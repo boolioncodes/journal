@@ -1,3 +1,3 @@
-<pre>
+```json
 {{ site | inspect }}
-</pre>
+```
