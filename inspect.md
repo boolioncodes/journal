@@ -1,3 +1,3 @@
 ```json
-{{ site | inspect }}
+{{ site | inspect | markdownify }}
 ```
