@@ -28,3 +28,7 @@ fu:
 <pre><code class="language-json">
 {{ page | jsonify }}
 </code></pre>
+
+`page.foo | size` : {{ page.foo | size }}  
+`page.fu | size` : {{ page.fu | size }}
+
