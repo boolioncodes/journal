@@ -1,0 +1,17 @@
+{% if include.var.first %} 
+    <node 
+  {% assign len = include.var | size %}
+  {% if !include.var.first.first and len == 2 %} 
+      key="{{ include.var[0] }}">
+      {% include var=include.var[1] %}
+    </node>
+  {% else %}
+    >
+    {% for i in include.var %}
+      {% include var=i %}
+    {% endfor %}
+    </node>
+  {% endif %}
+{% else %}
+  {% include.var %}
+{% endif %}
