@@ -37,6 +37,7 @@ fu:
 `page.foo | size` : {{ page.foo | size }}   
 `page.foo.first` : {{ page.foo.first }}  
 `page.foo.first | size` : {{ page.foo.first | size }}   
+`page.foo.first.first` : {{ page.foo.first.first }}  
 
 ## fu
 <pre><code class="language-json">
@@ -45,4 +46,6 @@ fu:
 `page.fu | size` : {{ page.fu | size }}  
 `page.fu.first` : {{ page.fu.first }}  
 `page.fu.first | size` : {{ page.fu.first | size }}   
+`page.fu.first.first` : {{ page.fu.first.first }}  
+
 
