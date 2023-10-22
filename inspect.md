@@ -8,6 +8,10 @@ fu:
 fee:
  - fie
  - fo
+eeny:
+ meeny:
+  miney:
+   - mo
 ---
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
@@ -59,4 +63,13 @@ fee:
 `page.fee.first` : {{ page.fee.first }}  
 `page.fee.first | size` : {{ page.fee.first | size }}   
 `page.fee.first.first` : {{ page.fee.first.first }}  
+
+## eeny
+<pre><code class="language-json">
+{{ page.eeny | inspect }}
+</code></pre>
+`page.eeny | size` : {{ page.eeny | size }}  
+`page.eeny.first` : {{ page.eeny.first }}  
+`page.eeny.first | size` : {{ page.eeny.first | size }}   
+`page.eeny.first.first` : {{ page.eeny.first.first }}  
 
