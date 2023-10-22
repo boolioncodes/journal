@@ -72,4 +72,12 @@ eeny:
 `page.eeny.first` : {{ page.eeny.first }}  
 `page.eeny.first | size` : {{ page.eeny.first | size }}   
 `page.eeny.first.first` : {{ page.eeny.first.first }}  
+`page.eeny.meeny | size` : {{ page.eeny.meeny | size }}  
+`page.eeny.meeny.first` : {{ page.eeny.meeny.first }}  
+`page.eeny.meeny.first | size` : {{ page.eeny.meeny.first | size }}   
+`page.eeny.meeny.first.first` : {{ page.eeny.meeny.first.first }}  
+`page.eeny.meeny.miney | size` : {{ page.eeny.meeny.miney | size }}  
+`page.eeny.meeny.miney.first` : {{ page.eeny.meeny.miney.first }}  
+`page.eeny.meeny.miney.first | size` : {{ page.eeny.meeny.miney.first | size }}   
+`page.eeny.meeny.miney.first.first` : {{ page.eeny.meeny.miney.first.first }}  
 
