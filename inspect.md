@@ -50,7 +50,7 @@ eeny:
 `page.foo.first.bar.first | size` : {{ page.foo.first.bar.first | size }}   
 `page.foo.first.bar.first.first` : {{ page.foo.first.bar.first.first }}  
 ```xml
-{% include serialize.xml var=page.foo %}
+{% include debug-var.html var=page.foo %}
 ```
 
 ## fu
