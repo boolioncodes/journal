@@ -24,7 +24,7 @@
 </tr>
 {% if elmZero %}
   {% for i in include.var %}
-    {% assign node=include.var[i] %}
+    {% assign node=i %}
     {% include debug-var.html var=node %}
   {% endfor %}
 {% endif %}
