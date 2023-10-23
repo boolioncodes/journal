@@ -56,9 +56,9 @@ eeny:
   <th>size</th>
   <th>first</th>
   <th>[0]</th>
-  <th>[0].size</th>
-  <th>[0].first</th>
-  <th>[0][0]</th>
+  <th>first.size</th>
+  <th>first.first</th>
+  <th>first[0]</th>
  </tr>
 {% include debug-var.html var=page.foo %}
 </table>
