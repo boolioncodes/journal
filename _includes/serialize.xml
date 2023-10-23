@@ -1,6 +1,7 @@
 {%- assign this=include.var -%}
 {%- if this.first -%} 
-  {%- if this.first != this[0] -%}
+  {% assign zeroeth = this[0] -%}
+  {%- if this.first != zeroeth -%}
     {%- for hash in this -%}
     {%- assign val = hash[1] %>
     <node key="{{ hash[0] }}">
