@@ -1,3 +1,4 @@
+{% assign elmZero = include.var[0] %}
 <tr>
   <td>
     {{ include.var }}
@@ -12,16 +13,16 @@
     {{ include.var[0] }}
   </td>
   <td>
-    {{ include.var[0].size }}
+    {{ elmZero.size }}
   </td>
   <td>
-    {{ include.var[0].first }}
+    {{ elmZero.first }}
   </td>
   <td>
-    {{ include.var[0][0] }}
+    {{ elmZero[0] }}
   </td>
 </tr>
-{% if include.var[0] %}
+{% if elmZero %}
   {% for i in include.var %}
     {% assign node=include.var[i] %}
     {% include debug-var.html var=node %}
