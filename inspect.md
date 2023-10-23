@@ -49,9 +49,19 @@ eeny:
 `page.foo.first.bar.first` : {{ page.foo.first.bar.first }}  
 `page.foo.first.bar.first | size` : {{ page.foo.first.bar.first | size }}   
 `page.foo.first.bar.first.first` : {{ page.foo.first.bar.first.first }}  
-```xml
+
+<table>
+ <tr>
+  <th>node</th>
+  <th>size</th>
+  <th>first</th>
+  <th>[0]</th>
+  <th>[0].size</th>
+  <th>[0].first</th>
+  <th>[0][0]</th>
+ </tr>
 {% include debug-var.html var=page.foo %}
-```
+</table>
 
 ## fu
 <pre><code class="language-json">
