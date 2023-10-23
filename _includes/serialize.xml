@@ -1,21 +1,21 @@
 {%- assign this=include.var -%}
 {%- if this.first -%} 
-  {%- assign firstLen = this.first | size -%}
-  {%- assign key = this.first.first -%}
-  {%- assign val = this.first.last -%}
-  {%- if !key.first and firstLen == 2 -%}
-    <node key="{{ key }}">
+  {%- if this.first != this[0] -%}
+    {%- for hash in this -%}
+    {%- assign val = hash[1] %>
+    <node key="{{ hash[0] }}">
       {% include serialize.xml var=val %}
     </node>
+    {%- endfor -%}
   {%- else -%}
     <node>
-    {%- for i in this -%}
-      {% include serialize.xml var=i %}
+    {%- for item in this -%}
+      {% include serialize.xml var=item %}
     {%- endfor -%}
     </node>
   {%- endif %}
 {%- else %}
-  <node type="text">
+  <text>
     {{ this }}
-  </node>
+  </text>
 {% endif -%}
