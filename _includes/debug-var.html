@@ -23,6 +23,7 @@
 </tr>
 {% if include.var[0] %}
   {% for i in include.var %}
-    {% include debug-var.html var=include.var[i] %}
+    {% assign node=include.var[i] %}
+    {% include debug-var.html var=node %}
   {% endfor %}
 {% endif %}
