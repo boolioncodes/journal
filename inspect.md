@@ -41,14 +41,6 @@ eeny:
 <pre><code class="language-json">
 {{ page.foo | inspect }}
 </code></pre>
-`page.foo | size` : {{ page.foo | size }}   
-`page.foo.first` : {{ page.foo.first }}  
-`page.foo.first | size` : {{ page.foo.first | size }}   
-`page.foo.first.first` : {{ page.foo.first.first }}  
-`page.foo.first.bar | size` : {{ page.foo.first.bar | size }}   
-`page.foo.first.bar.first` : {{ page.foo.first.bar.first }}  
-`page.foo.first.bar.first | size` : {{ page.foo.first.bar.first | size }}   
-`page.foo.first.bar.first.first` : {{ page.foo.first.bar.first.first }}  
 
 <table>
  <tr>
@@ -63,18 +55,28 @@ eeny:
 {% include debug-var.html var=page.foo %}
 </table>
 
+```xml
+{% include serialize.xml var=page.foo %}
+```
+
 ## fu
 <pre><code class="language-json">
 {{ page.fu | inspect }}
 </code></pre>
-`page.fu | size` : {{ page.fu | size }}  
-`page.fu.first` : {{ page.fu.first }}  
-`page.fu.first | size` : {{ page.fu.first | size }}   
-`page.fu.first.first` : {{ page.fu.first.first }}  
-`page.fu.bar | size` : {{ page.fu.bar | size }}  
-`page.fu.bar.first` : {{ page.fu.bar.first }}  
-`page.fu.bar.first | size` : {{ page.fu.bar.first | size }}   
-`page.fu.bar.first.first` : {{ page.fu.bar.first.first }}  
+
+<table>
+ <tr>
+  <th>node</th>
+  <th>size</th>
+  <th>first</th>
+  <th>[0]</th>
+  <th>first.size</th>
+  <th>first.first</th>
+  <th>first[0]</th>
+ </tr>
+{% include debug-var.html var=page.fu %}
+</table>
+
 ```xml
 {% include serialize.xml var=page.fu %}
 ```
@@ -83,10 +85,20 @@ eeny:
 <pre><code class="language-json">
 {{ page.fee | inspect }}
 </code></pre>
-`page.fee | size` : {{ page.fee | size }}  
-`page.fee.first` : {{ page.fee.first }}  
-`page.fee.first | size` : {{ page.fee.first | size }}   
-`page.fee.first.first` : {{ page.fee.first.first }}  
+
+<table>
+ <tr>
+  <th>node</th>
+  <th>size</th>
+  <th>first</th>
+  <th>[0]</th>
+  <th>first.size</th>
+  <th>first.first</th>
+  <th>first[0]</th>
+ </tr>
+{% include debug-var.html var=page.fee %}
+</table>
+
 ```xml
 {% include serialize.xml var=page.fee %}
 ```
@@ -96,18 +108,20 @@ eeny:
 <pre><code class="language-json">
 {{ page.eeny | inspect }}
 </code></pre>
-`page.eeny | size` : {{ page.eeny | size }}  
-`page.eeny.first` : {{ page.eeny.first }}  
-`page.eeny.first | size` : {{ page.eeny.first | size }}   
-`page.eeny.first.first` : {{ page.eeny.first.first }}  
-`page.eeny.meeny | size` : {{ page.eeny.meeny | size }}  
-`page.eeny.meeny.first` : {{ page.eeny.meeny.first }}  
-`page.eeny.meeny.first | size` : {{ page.eeny.meeny.first | size }}   
-`page.eeny.meeny.first.first` : {{ page.eeny.meeny.first.first }}  
-`page.eeny.meeny.miney | size` : {{ page.eeny.meeny.miney | size }}  
-`page.eeny.meeny.miney.first` : {{ page.eeny.meeny.miney.first }}  
-`page.eeny.meeny.miney.first | size` : {{ page.eeny.meeny.miney.first | size }}   
-`page.eeny.meeny.miney.first.first` : {{ page.eeny.meeny.miney.first.first }}  
+
+<table>
+ <tr>
+  <th>node</th>
+  <th>size</th>
+  <th>first</th>
+  <th>[0]</th>
+  <th>first.size</th>
+  <th>first.first</th>
+  <th>first[0]</th>
+ </tr>
+{% include debug-var.html var=page.eeny %}
+</table>
+
 ```xml
 {% include serialize.xml var=page.eeny %}
 ```
