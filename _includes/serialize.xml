@@ -3,10 +3,10 @@
   {% assign zeroeth = this[0] -%}
   {%- if this.first != zeroeth -%}
     {%- for hash in this -%}
-    {%- assign val = hash[1] %>
-    <node key="{{ hash[0] }}">
-      {% include serialize.xml var=val %}
-    </node>
+      {%- assign val = hash[1] %}
+      <node key="{{ hash[0] }}">
+        {% include serialize.xml var=val %}
+      </node>
     {%- endfor -%}
   {%- else -%}
     <node>
