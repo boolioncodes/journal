@@ -1,18 +1,20 @@
-{%- if include.var.first -%} 
-  {%- assign len = include.var | size -%}
-  {%- if !include.var.first.first and len == 2 -%}
-      {%- assign key = include.var[0] -%}
-      {%- assign val = include.var[1] -%}
+{%- assign this=include.var -%}
+{%- if this.first -%} 
+  {%- assign thisLen = this | size -%}
+  {%- assign firstLen = this.first | size -%}
+  {%- if !this.first.first.first and firstLen=2 and thisLen=1 -%}
+      {%- assign key = this.first[0] -%}
+      {%- assign val = this.first[1] -%}
     <node key="{{ key }}">
       {% include serialize.xml var=val %}
     </node>
   {%- else -%}
     <node>
-    {%- for i in include.var -%}
+    {%- for i in this -%}
       {% include serialize.xml var=i %}
     {%- endfor -%}
     </node>
   {%- endif %}
 {%- else %}
-  {{ include.var }}
+  {{ this }}
 {% endif -%}
