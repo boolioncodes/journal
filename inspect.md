@@ -25,16 +25,10 @@ eeny:
 # Inspecting Jekyll variables
 
 ## `site`
-<!--
+
 <pre><code class="language-json">
 {{ site | inspect }}
 </code></pre>
--->
-<pre>
- {% highlight json %}
- {{ site | inspect }} 
- {% endhighlight %}
-</pre>
 
 ## `page`
 
