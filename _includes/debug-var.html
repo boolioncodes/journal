@@ -21,7 +21,7 @@
     {{ include.var.first[0] }}
   </td>
 </tr>
-{% if elmZero %}
+{% if include.var.first %}
   {% for i in include.var %}
     {% include debug-var.html var=i %}
   {% endfor %}
