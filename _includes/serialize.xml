@@ -1,6 +1,6 @@
-{%- if include.var[0] -%} 
+{%- if include.var.first -%} 
   {%- assign len = include.var | size -%}
-  {%- if !include.var[0][0] and len == 2 -%}
+  {%- if !include.var.first.first and len == 2 -%}
       {%- assign key = include.var[0] -%}
       {%- assign val = include.var[1] -%}
     <node key="{{ key }}">
