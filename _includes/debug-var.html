@@ -1,0 +1,28 @@
+<tr>
+  <td>
+    {{ include.var }}
+  </td>
+  <td>
+    {{ include.var.size }}
+  </td>
+  <td>
+    {{ include.var.first }}
+  </td>
+  <td>
+    {{ include.var[0] }}
+  </td>
+  <td>
+    {{ include.var[0].size }}
+  </td>
+  <td>
+    {{ include.var[0].first }}
+  </td>
+  <td>
+    {{ include.var[0][0] }}
+  </td>
+</tr>
+{% if include.var[0] %}
+  {% for i in include.var %}
+    {% include debug-var.html var=include.var[i] %}
+  {% endfor %}
+{% endif %}
