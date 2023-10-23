@@ -2,9 +2,9 @@
 {%- if this.first -%} 
   {%- assign thisLen = this | size -%}
   {%- assign firstLen = this.first | size -%}
-  {%- if !this.first.first.first and firstLen=2 and thisLen=1 -%}
-      {%- assign key = this.first[0] -%}
-      {%- assign val = this.first[1] -%}
+  {%- if !this.first.first.first and firstLen==2 and thisLen==1 -%}
+      {%- assign key = this.first.first -%}
+      {%- assign val = this.first.last -%}
     <node key="{{ key }}">
       {% include serialize.xml var=val %}
     </node>
@@ -16,5 +16,7 @@
     </node>
   {%- endif %}
 {%- else %}
-  {{ this }}
+  <node type="text">
+    {{ this }}
+  </node>
 {% endif -%}
