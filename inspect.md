@@ -67,9 +67,7 @@ types:
    {% endunless %}
  {% endfor %}
  {% for part in site %}
-   {% unless part == site.collections %}
      {% include debug-var.html var=part %}
-   {% endunless %}
  {% endfor %}
 
 </table>
