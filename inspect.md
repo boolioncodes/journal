@@ -30,11 +30,19 @@ eeny:
 {{ site | inspect }}
 </code></pre>
 
+```xml
+{% include serialize.xml var=site %}
+```
+
 ## `page`
 
 <pre><code class="language-json">
 {{ page | jsonify }}
 </code></pre>
+
+```xml
+{% include serialize.xml var=page %}
+```
 
 ## foo
 
