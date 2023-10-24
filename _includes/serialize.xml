@@ -1,15 +1,15 @@
 {%- assign this=include.var -%}
 {%- if this.first -%} 
-  {%- assign indent=include.space | append: "    " -%}
+  {%- assign indent=include.space | default: "" | append: "    " -%}
   {%- assign zeroeth = this[0] -%}
   {%- if this.first != zeroeth -%}
 
 {{ include.space | default: "" }}<obj>
 
-  {%- for hash in this -%}
+    {%- for hash in this -%}
       {%- assign val = hash[1] %}
 {{ include.space | default: "" }}  <prop key="{{ hash[0] }}">
-{{ include.space | default: "" }}{% include serialize.xml var=item space=indent %}
+{{ include.space | default: "" }}{% include serialize.xml var=val space=indent %}
 {{ include.space | default: "" }}  </prop>{% endfor -%}
 {{ include.space | default: "" }}</obj>
 
