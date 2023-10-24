@@ -1,14 +1,8 @@
 {%- assign this=include.var -%}
 
-{%
-  # arrays or objects
-%}
 {%- if this.first -%} 
   {%- assign zeroeth = this[0] -%}
 
-  {%
-    # objects
-  %}
   {%- if this.first != zeroeth -%}
 
 {{ include.space | default: "" }}<obj>
@@ -21,9 +15,6 @@
 {{ include.space | default: "" }}  </prop>{% endfor %}
 {{ include.space | default: "" }}</obj>
 
-  {%
-    # arrays
-  %}
   {%- else -%}
 
 {{ include.space | default: "" }}<arr>
@@ -37,10 +28,6 @@
 
   {%- endif -%}
 
-{%
-  # all remaining types
-  # (primitives)
-%}
 {%- else -%}
 
 {{ include.space | default: "" }}{{ this }}
