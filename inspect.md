@@ -54,6 +54,7 @@ types:
   <th>first.first</th>
   <th>first[0]</th>
  </tr>
+{% include debug-var.html var=site.posts %}
 {% include debug-var.html var=site.pages %}
 </table>
 
