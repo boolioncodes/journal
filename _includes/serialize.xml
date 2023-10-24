@@ -1,20 +1,22 @@
 {%- assign this=include.var -%}
+{%- assign indent=include.space | append: "  " | default: "" -%}
 {%- if this.first -%} 
   {%- assign zeroeth = this[0] -%}
   {%- if this.first != zeroeth -%}
     {%- for hash in this -%}
       {%- assign val = hash[1] -%}
-<obj key="{{ hash[0] }}">
-  {% include serialize.xml var=val %}
-</obj>
+{{ indent }}<obj key="{{ hash[0] }}">
+{% include serialize.xml var=val space=indent %}
+{{ indent }}</obj>
     {%- endfor -%}
   {%- else -%}
-<arr>
-  {% for item in this %}<item>
-    {% include serialize.xml var=item %}
-  </item>{% endfor %}
-</arr>
+{{ indent }}<arr>
+  {%- for item in this %}
+{{ indent }}  <item>
+{{ indent }}  {% include serialize.xml var=item space=indent%}
+{{ indent }}  </item>{% endfor %}
+{{ indent }}</arr>
   {%- endif -%}
 {%- else %}
-  {{ this }}
+{{ indent }}{{ this }}
 {% endif -%}
