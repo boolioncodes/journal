@@ -29,7 +29,7 @@
   {%- endif -%}
 
 {%- else -%}
-{%- assign closebrace = '}' -%}
-{{ include.space | default: "" }}{{ this | replace "~" "`" }}
+{%- assign tilde = '~' -%}
+{{ include.space | default: "" }}{{ this | replace tilde "`" }}
 
 {%- endif -%}
