@@ -60,7 +60,8 @@ types:
  {% include debug-var.html var=site.rdiscount %}
  {% include debug-var.html var=site.redcarpet %}
  {% include debug-var.html var=site.limit_posts %}
- {% include debug-var.html var=site.collections[0].docs %}
+ {% assign colzero = site.collections[0] %}
+ {% include debug-var.html var=colzero.docs %}
 </table>
 
 {% raw %}
