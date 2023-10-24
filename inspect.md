@@ -38,6 +38,11 @@ types:
 
 # Inspecting Jekyll variables
 
+but first, some backticks
+````
+\`\`\`
+````
+
 ## `site`
 
 <pre><code class="language-json">
