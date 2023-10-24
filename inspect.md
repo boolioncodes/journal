@@ -38,11 +38,6 @@ types:
 
 # Inspecting Jekyll variables
 
-but first, some backticks
-~~~
-```
-~~~
-
 ## `site`
 
 <pre><code class="language-json">
@@ -60,9 +55,9 @@ but first, some backticks
 {% include serialize.xml var=page %}
 </code></pre>
 {% endraw %}-->
-```xml
+~~~xml
 {% include serialize.xml var=page %}
-```
+~~~
 
 
 ## foo
@@ -84,9 +79,9 @@ but first, some backticks
 {% include debug-var.html var=page.foo %}
 </table>
 
-```xml
+~~~xml
 {% include serialize.xml var=page.foo %}
-```
+~~~
 
 ## fu
 <pre><code class="language-json">
@@ -106,9 +101,9 @@ but first, some backticks
 {% include debug-var.html var=page.fu %}
 </table>
 
-```xml
+~~~xml
 {% include serialize.xml var=page.fu %}
-```
+~~~
 
 ## fee
 <pre><code class="language-json">
@@ -128,9 +123,9 @@ but first, some backticks
 {% include debug-var.html var=page.fee %}
 </table>
 
-```xml
+~~~xml
 {% include serialize.xml var=page.fee %}
-```
+~~~
 
 
 ## eeny
@@ -151,9 +146,9 @@ but first, some backticks
 {% include debug-var.html var=page.eeny %}
 </table>
 
-```xml
+~~~xml
 {% include serialize.xml var=page.eeny %}
-```
+~~~
 
 ## types
 <pre><code class="language-json">
@@ -173,6 +168,6 @@ but first, some backticks
 {% include debug-var.html var=page.types %}
 </table>
 
-```xml
+~~~xml
 {% include serialize.xml var=page.types %}
-```
+~~~
