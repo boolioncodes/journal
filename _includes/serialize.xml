@@ -9,8 +9,8 @@
     {%- for hash in this -%}
       {%- assign val = hash[1] %}
 {{ include.space | default: "" }}  <prop key="{{ hash[0] }}">
-{{ include.space | default: "" }}{% include serialize.xml var=val space=indent %}
-{{ include.space | default: "" }}  </prop>{% endfor -%}
+{% include serialize.xml var=val space=indent %}
+{{ include.space | default: "" }}  </prop>{% endfor %}
 {{ include.space | default: "" }}</obj>
 
   {%- else -%}
@@ -19,7 +19,7 @@
   
     {%- for item in this %}
 {{ include.space | default: "" }}  <item>
-{{ include.space | default: "" }}{% include serialize.xml var=item space=indent %}
+{% include serialize.xml var=item space=indent %}
 {{ include.space | default: "" }}  </item>{% endfor %}
 {{ include.space | default: "" }}</arr>
 
