@@ -32,6 +32,7 @@ types:
 
 <!-- and it's easy to individually load additional languages -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/json.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/xml.min.js"></script>
 
 <script>hljs.highlightAll();</script>
 
@@ -49,9 +50,9 @@ types:
 {{ page | jsonify }}
 </code></pre>
 
-```xml
+<pre><code class="language-xml">
 {% include serialize.xml var=page %}
-```
+</code></pre>
 
 ## foo
 
