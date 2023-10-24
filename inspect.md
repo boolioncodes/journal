@@ -49,6 +49,10 @@ types:
 {{ page | jsonify }}
 </code></pre>
 
+```xml
+{% include serialize.xml var=page %}
+```
+
 ## foo
 
 <pre><code class="language-json">
