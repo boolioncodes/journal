@@ -30,6 +30,6 @@
 
 {%- else -%}
 {%- assign closebrace = '}' -%}
-{{ include.space | default: "" }}{{ this  }}
+{{ include.space | default: "" }}{{ this | replace "~" "`" }}
 
 {%- endif -%}
