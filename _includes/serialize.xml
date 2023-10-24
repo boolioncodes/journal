@@ -30,6 +30,6 @@
 
 {%- else -%}
 
-{{ include.space | default: "" }}{{ this }}
+{{ include.space | default: "" }}{{ this | xml_escape | replace: "{", "&#123;" }}
 
 {%- endif -%}
