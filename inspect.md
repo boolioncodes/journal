@@ -61,11 +61,13 @@ types:
  {% include debug-var.html var=site.redcarpet %}
  {% include debug-var.html var=site.limit_posts %}
  {% assign colzero = site.collections[0] %}
- {% assign props = "files, directory, output, relative_directory, label, permalink" | split: "," %}
- {% for prop in props %}
-    {% assign part = colzero[ prop ] %}
-    {% include debug-var.html var=part %}
- {% endfor %}
+ {% include debug-var.html var=colzero.files %}
+ {% include debug-var.html var=colzero.directory %}
+ {% include debug-var.html var=colzero.output %}
+ {% include debug-var.html var=colzero.relative_directory %}
+ {% include debug-var.html var=colzero.label %}
+ {% include debug-var.html var=colzero.permalink %}
+
 </table>
 
 {% raw %}
