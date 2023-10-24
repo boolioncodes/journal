@@ -62,8 +62,9 @@ types:
  {% include debug-var.html var=site.limit_posts %}
  {% assign colzero = site.collections[0] %}
  {% assign props = "files, directory, output, relative_directory, label, permalink" | split: "," %}
- {% for part in props %}
-    {% include debug-var.html var=colzero[part] %}
+ {% for prop in props %}
+    {% assign part = colzero[ prop ] %}
+    {% include debug-var.html var=part %}
  {% endfor %}
 </table>
 
