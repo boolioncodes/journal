@@ -44,9 +44,26 @@ types:
 {{ site | inspect }}
 </code></pre>
 
+<table>
+ <tr>
+  <th>node</th>
+  <th>size</th>
+  <th>first</th>
+  <th>[0]</th>
+  <th>first.size</th>
+  <th>first.first</th>
+  <th>first[0]</th>
+ </tr>
+{% for part in site limit: 6 %}
+ {% include debug-var.html var=part %}
+{% endfor %}
+</table>
+
+{% raw %}
 ``````xml
 {% include serialize.xml var=site %}
 ``````
+{% endraw %}
 
 ## `page`
 
