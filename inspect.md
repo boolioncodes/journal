@@ -39,9 +39,9 @@ types:
 # Inspecting Jekyll variables
 
 but first, some backticks
-````
-\`\`\`
-````
+~~~
+```
+~~~
 
 ## `site`
 
