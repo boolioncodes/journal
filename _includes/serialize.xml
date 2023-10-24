@@ -1,29 +1,46 @@
 {%- assign this=include.var -%}
+
+{%
+  # arrays or objects
+%}
 {%- if this.first -%} 
-  {%- assign indent=include.space | default: "" | append: "    " -%}
   {%- assign zeroeth = this[0] -%}
+
+  {%
+    # objects
+  %}
   {%- if this.first != zeroeth -%}
 
 {{ include.space | default: "" }}<obj>
 
     {%- for hash in this -%}
       {%- assign val = hash[1] %}
+{% assign indent=include.space | default: "" | append: "    " -%}
 {{ include.space | default: "" }}  <prop key="{{ hash[0] }}">
 {% include serialize.xml var=val space=indent %}
 {{ include.space | default: "" }}  </prop>{% endfor %}
 {{ include.space | default: "" }}</obj>
 
+  {%
+    # arrays
+  %}
   {%- else -%}
 
 {{ include.space | default: "" }}<arr>
   
     {%- for item in this %}
+{% assign indent=include.space | default: "" | append: "    " -%}
 {{ include.space | default: "" }}  <item>
 {% include serialize.xml var=item space=indent %}
 {{ include.space | default: "" }}  </item>{% endfor %}
 {{ include.space | default: "" }}</arr>
 
   {%- endif -%}
+
+{%
+  # all remaining types
+  # (primitives)
+%}
 {%- else -%}
 
 {{ include.space | default: "" }}{{ this }}
