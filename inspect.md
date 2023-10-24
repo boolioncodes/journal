@@ -54,9 +54,7 @@ types:
   <th>first.first</th>
   <th>first[0]</th>
  </tr>
-{% for part in site limit: 6 %}
- {% include debug-var.html var=part %}
-{% endfor %}
+ {% include debug-var.html var=site.collections %}
 </table>
 
 {% raw %}
