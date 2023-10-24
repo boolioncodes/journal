@@ -30,6 +30,6 @@
 
 {%- else -%}
 
-{{ include.space | default: "" }}{{ this | replace: "&", "&amp;" | replace: "<", "&lt;" | replace: "'", "&apos;" | replace: '"', "&quot;" | replace: "{", "&#123;" }}
+{{ include.space | default: "" }}{{ this | replace: "{", "&#123;" | replace: "}", "&#124;" | replace: "`", "&#96;" }}
 
 {%- endif -%}
