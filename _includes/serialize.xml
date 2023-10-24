@@ -29,7 +29,7 @@
   {%- endif -%}
 
 {%- else -%}
-
-{{ include.space | default: "" }}{{ this | replace: "{", "&#123;" | replace: "}", "&#124;" | replace: "`", "&#96;" }}
+{%- capture closebrace -%}{{ '}' }}{%- endcapture -%}
+{{ include.space | default: "" }}{{ this | replace: "{", "&#123;" | replace: closebrace, "&#125;" | replace: "`", "&#96;" }}
 
 {%- endif -%}
