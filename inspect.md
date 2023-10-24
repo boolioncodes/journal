@@ -67,6 +67,7 @@ types:
  {% include debug-var.html var=colzero.relative_directory %}
  {% include debug-var.html var=colzero.label %}
  {% include debug-var.html var=colzero.permalink %}
+ {% include debug-var.html var=colzero.docs %}
 
 </table>
 
