@@ -1,23 +1,31 @@
 {%- assign this=include.var -%}
 {%- if this.first -%} 
+  {%- assign indent=include.space | append: "    " -%}
   {%- assign zeroeth = this[0] -%}
   {%- if this.first != zeroeth -%}
-    {%- for hash in this -%}
-      {%- assign val = hash[1] -%}
-{%- assign indent=include.space | append: "  " -%}
-{{ include.space | default: "" }}<obj key="{{ hash[0] }}">
-{% include serialize.xml var=val space=indent %}
+
+{{ include.space | default: "" }}<obj>
+
+  {%- for hash in this -%}
+      {%- assign val = hash[1] %}
+{{ include.space | default: "" }}  <prop key="{{ hash[0] }}">
+{{ include.space | default: "" }}{% include serialize.xml var=item space=indent %}
+{{ include.space | default: "" }}  </prop>{% endfor -%}
 {{ include.space | default: "" }}</obj>
-    {%- endfor -%}
+
   {%- else -%}
+
 {{ include.space | default: "" }}<arr>
-{%- assign indent=include.space | append: "    " -%}
-  {%- for item in this %}
+  
+    {%- for item in this %}
 {{ include.space | default: "" }}  <item>
-{{ include.space | default: "" }}  {% include serialize.xml var=item space=indent %}
+{{ include.space | default: "" }}{% include serialize.xml var=item space=indent %}
 {{ include.space | default: "" }}  </item>{% endfor %}
 {{ include.space | default: "" }}</arr>
+
   {%- endif -%}
-{%- else %}
+{%- else -%}
+
 {{ include.space | default: "" }}{{ this }}
-{% endif -%}
+
+{%- endif -%}
