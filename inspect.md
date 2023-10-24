@@ -44,6 +44,10 @@ types:
 {{ site | inspect }}
 </code></pre>
 
+``````xml
+{% include serialize.xml var=site %}
+``````
+
 ## `page`
 
 <pre><code class="language-json">
