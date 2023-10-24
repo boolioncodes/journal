@@ -61,7 +61,10 @@ types:
  {% include debug-var.html var=site.redcarpet %}
  {% include debug-var.html var=site.limit_posts %}
  {% assign colzero = site.collections[0] %}
- {% include debug-var.html var=colzero.docs %}
+ {% assign props = "files, directory, output, relative_directory, label, permalink" | split: "," %}
+ {% for part in props %}
+    {% include debug-var.html var=colzero[part] %}
+ {% endfor %}
 </table>
 
 {% raw %}
