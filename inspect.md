@@ -59,6 +59,7 @@ types:
  {% include debug-var.html var=site.related_posts %}
  {% include debug-var.html var=site.rdiscount %}
  {% include debug-var.html var=site.redcarpet %}
+ {% include debug-var.html var=site.limit_posts %}
 </table>
 
 {% raw %}
