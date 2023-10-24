@@ -56,6 +56,7 @@ types:
  </tr>
  {% include debug-var.html var=site.data %}
  {% include debug-var.html var=site.static_files %}
+ {% include debug-var.html var=site.related_posts %}
 </table>
 
 {% raw %}
