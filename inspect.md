@@ -55,6 +55,7 @@ types:
   <th>first[0]</th>
  </tr>
  {% include debug-var.html var=site.data %}
+ {% include debug-var.html var=site.static_files %}
 </table>
 
 {% raw %}
