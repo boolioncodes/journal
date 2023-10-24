@@ -61,7 +61,7 @@ types:
  {% include debug-var.html var=site.redcarpet %}
  {% include debug-var.html var=site.limit_posts %}
  {% for part in site.collections %}
-   {% unless part == site.collections.docs %}
+   {% unless part == site.collections[0].docs %}
      {% include debug-var.html var=part %}
    {% endunless %}
  {% endfor %}
