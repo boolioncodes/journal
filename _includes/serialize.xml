@@ -29,6 +29,9 @@
   {%- endif -%}
 
 {%- else -%}
+
+  {%- if this -%}
 {{ include.space | default: "" }}{{ this | replace: "`````" "``" }}
+  {%- endif -%}
 
 {%- endif -%}
