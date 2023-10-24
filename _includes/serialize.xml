@@ -30,6 +30,6 @@
 
 {%- else -%}
 {%- assign tilde = '~' -%}
-{{ include.space | default: "" }}{{ this | replace tilde "`" }}
+{{ include.space | default: "" }}{{ this | replace '~' '`' }}
 
 {%- endif -%}
