@@ -12,6 +12,19 @@ eeny:
  meeny:
   miney:
    - mo
+types:
+  arr:
+   - 0
+   - 1
+   - true
+   - false
+   - string
+  obj:
+   zero: 0
+   one: 1
+   boolt: true
+   boolf: false
+   str: string
 ---
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
@@ -30,19 +43,11 @@ eeny:
 {{ site | inspect }}
 </code></pre>
 
-```xml
-{% include serialize.xml var=site %}
-```
-
 ## `page`
 
 <pre><code class="language-json">
 {{ page | jsonify }}
 </code></pre>
-
-```xml
-{% include serialize.xml var=page %}
-```
 
 ## foo
 
@@ -129,6 +134,34 @@ eeny:
  </tr>
 {% include debug-var.html var=page.eeny %}
 </table>
+
+```xml
+{% include serialize.xml var=page.eeny %}
+```
+
+## types
+<pre><code class="language-json">
+{{ page.types | inspect }}
+</code></pre>
+
+<table>
+ <tr>
+  <th>node</th>
+  <th>size</th>
+  <th>first</th>
+  <th>[0]</th>
+  <th>first.size</th>
+  <th>first.first</th>
+  <th>first[0]</th>
+ </tr>
+{% include debug-var.html var=page.types %}
+</table>
+
+```xml
+{% include serialize.xml var=page.types %}
+```
+
+
 
 ```xml
 {% include serialize.xml var=page.eeny %}
