@@ -61,13 +61,11 @@ types:
  {% include debug-var.html var=site.redcarpet %}
  {% include debug-var.html var=site.limit_posts %}
  {% assign colzero = site.collections[0] %}
- {% include debug-var.html var=colzero.files %}
- {% include debug-var.html var=colzero.directory %}
- {% include debug-var.html var=colzero.output %}
- {% include debug-var.html var=colzero.relative_directory %}
- {% include debug-var.html var=colzero.label %}
- {% include debug-var.html var=colzero.permalink %}
- {% include debug-var.html var=colzero.docs %}
+ {% for part in colzero %}
+   {% unless part == colzero.docs %}
+     {% include debug-var.html var=part %}
+   {% endunless %}
+ {% endfor %}
 
 </table>
 
