@@ -29,6 +29,10 @@
   {%- endif -%}
 
 {%- else -%}
-{{ include.space | default: "" }}{{ this | replace '``' '`' }}
+{%- assign backtick = '`' -%}
+{%- capture doublebacktick -%}
+{{ backtick }}{{ backtick }}
+{%- endcapture -%}
+{{ include.space | default: "" }}{{ this | replace doublebacktick backtick }}
 
 {%- endif -%}
