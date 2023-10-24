@@ -54,22 +54,7 @@ types:
   <th>first.first</th>
   <th>first[0]</th>
  </tr>
- {% include debug-var.html var=site.data %}
- {% include debug-var.html var=site.static_files %}
- {% include debug-var.html var=site.related_posts %}
- {% include debug-var.html var=site.rdiscount %}
- {% include debug-var.html var=site.redcarpet %}
- {% include debug-var.html var=site.limit_posts %}
- {% assign colzero = site.collections[0] %}
- {% for part in colzero %}
-   {% unless part == colzero.docs %}
-     {% include debug-var.html var=part %}
-   {% endunless %}
- {% endfor %}
- {% for part in site %}
-     {% include debug-var.html var=part %}
- {% endfor %}
-
+{% include debug-var.html var=site %}
 </table>
 
 {% raw %}
