@@ -160,9 +160,3 @@ types:
 ```xml
 {% include serialize.xml var=page.types %}
 ```
-
-
-
-```xml
-{% include serialize.xml var=page.eeny %}
-```
