@@ -7,7 +7,7 @@
 <obj key="{{ hash[0] }}">
   {% include serialize.xml var=val %}
 </obj>
-    {-% endfor -%}
+    {%- endfor -%}
   {%- else -%}
 <arr>
   {% for item in this %}<item>
