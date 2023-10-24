@@ -3,18 +3,16 @@
   {%- assign zeroeth = this[0] -%}
   {%- if this.first != zeroeth -%}
     {%- for hash in this -%}
-      {%- assign val = hash[1] %}
+      {%- assign val = hash[1] -%}
 <obj key="{{ hash[0] }}">
   {% include serialize.xml var=val %}
 </obj>
-    {% endfor -%}
-  {%- else %}
+    {-% endfor -%}
+  {%- else -%}
 <arr>
-  {% for item in this %}
-  <item>
+  {% for item in this %}<item>
     {% include serialize.xml var=item %}
-  </item>
-  {% endfor %}
+  </item>{% endfor %}
 </arr>
   {%- endif -%}
 {%- else %}
