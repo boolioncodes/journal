@@ -31,7 +31,7 @@
 {%- else -%}
 
   {%- if this -%}
-{{ include.space | default: "" }}{{ this | replace: "`````" "`" | escape }}
+{{ include.space | default: "" }}{{ this | replace: "``" "`" | escape }}
   {%- endif -%}
 
 {%- endif -%}
