@@ -54,8 +54,10 @@ types:
   <th>first.first</th>
   <th>first[0]</th>
  </tr>
+ <!-- {% raw %}
 {% include debug-var.html var=site.github %}
 {% include debug-var.html var=site.pages %}
+ {% endraw %} -->
 </table>
 
 {% raw %}
@@ -77,6 +79,22 @@ types:
 {% endraw %}-->
 ``````xml
 {% include serialize.xml var=page %}
+``````
+
+
+## `layout`
+
+<pre><code class="language-json">
+{{ layout | jsonify }}
+</code></pre>
+
+<!-- {% raw %}
+<pre><code class="language-xml">
+{% include serialize.xml var=page %}
+</code></pre>
+{% endraw %}-->
+``````xml
+{% include serialize.xml var=layout %}
 ``````
 
 
