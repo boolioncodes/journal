@@ -31,7 +31,13 @@
 {%- else -%}
 
   {%- if this -%}
-{{ include.space | default: "" }}{{ this | replace: "````" "`````" | escape }}
+    {%- capture backtick1 -%}
+      {{ "``" | append: "`" }}
+    {%- endcapture -%}
+    {%- capture backtick2 -%}
+      {{ backtick1 }}{{ backtick1 }}
+    {%- endcapture -%}
+{{ include.space | default: "" }}{{ this | replace: backtick2 backtick1 | escape }}
   {%- endif -%}
 
 {%- endif -%}
