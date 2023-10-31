@@ -61,9 +61,9 @@ types:
 </table>
 
 {% raw %}
-``````xml
+`````xml
 {% include serialize.xml var=site %}
-``````
+`````
 {% endraw %}
 
 ## `page`
@@ -81,9 +81,9 @@ types:
 {% include serialize.xml var=page %}
 </code></pre>
 {% endraw %}-->
-``````xml
+````xml
 {% include serialize.xml var=page %}
-``````
+````
 
 
 ## `layout`
@@ -97,9 +97,9 @@ types:
 {% include serialize.xml var=page %}
 </code></pre>
 {% endraw %}-->
-``````xml
+```xml
 {% include serialize.xml var=layout %}
-``````
+```
 
 
 ## foo
