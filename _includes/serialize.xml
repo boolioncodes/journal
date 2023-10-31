@@ -31,13 +31,7 @@
 {%- else -%}
 
   {%- if this -%}
-    {%- capture backtick1 -%}
-      {{ "``" | append: "`" }}
-    {%- endcapture -%}
-    {%- capture backtick2 -%}
-      {{ backtick1 }}{{ backtick1 }}
-    {%- endcapture -%}
-{{ include.space | default: "" }}{{ this | replace: backtick2 backtick1 | escape }}
+{{ include.space | default: "" }}{{ this | replace: "``" "&#96;&#96;" | escape }}
   {%- endif -%}
 
 {%- endif -%}
