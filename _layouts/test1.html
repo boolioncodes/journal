@@ -13,4 +13,15 @@ layout: default
 {{ sx1 | xml_escape }}
 </code></pre>
 
+<h2 id="content"><code>content</code></h2>
+
+<pre><code class="language-json">
+{{ content | jsonify }}
+</code></pre>
+
+{%- capture sx2 %}{% include serialize.xml var=content %}{% endcapture -%}
+<pre><code class="language-xml">
+{{ sx2 | xml_escape }}
+</code></pre>
+
 {{ content }}
