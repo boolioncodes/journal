@@ -8,7 +8,7 @@ layout: default
 {{ layout | jsonify }}
 </code></pre>
 
-{-% capture sx1 %}{% include serialize.xml var=layout %}{% endcapture -%}
+{-% capture sx1 %}{% include serialize.xml var=layout %}{% endcapture %-}
 <pre><code class="language-xml">
 {{ sx1 | xml_escape }}
 </code></pre>
