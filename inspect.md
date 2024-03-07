@@ -1,4 +1,5 @@
 ---
+layout: test1
 foo:
  - bar: foobar
  - baz: foobaz
