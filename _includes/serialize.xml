@@ -4,7 +4,7 @@
 
   {%- assign indent=include.space | default: "" | append: "    " -%}
 <{{ include.top }}>
-{% include serialize.xml var=val space=indent %}
+{% include serialize.xml var=this space=indent %}
 </{{ include.top }}>
 
 {%- elseif this.first -%} 
