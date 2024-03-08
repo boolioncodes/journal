@@ -1,6 +1,13 @@
 {%- assign this=include.var -%}
 
-{%- if this.first -%} 
+{%- if include.top -%}
+
+  {%- assign indent=include.space | default: "" | append: "    " -%}
+<{{ include.top }}>
+{% include serialize.xml var=val space=indent %}
+</{{ include.top }}>
+
+{%- elseif this.first -%} 
   {%- assign zeroeth = this[0] -%}
 
   {%- if this.first != zeroeth -%}
