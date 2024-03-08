@@ -10,7 +10,7 @@ layout: default
 
 {%- capture sx1 %}{% include serialize.xml var=layout top="layout" %}{% endcapture -%}
 <pre><code class="language-xml">
-{{ sx1 | xml_escape }}
+{{ sx1 | escape_once }}
 </code></pre>
 
 <h2 id="content"><code>content</code></h2>
@@ -21,7 +21,7 @@ layout: default
 
 {%- capture sx2 %}{% include serialize.xml var=content top="content" %}{% endcapture -%}
 <pre><code class="language-xml">
-{{ sx2 }}
+{{ sx2 | escape_once }}
 </code></pre>
 
 {{ content }}
